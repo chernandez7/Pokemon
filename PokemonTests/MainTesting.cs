@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace PokemonTests
 {
     [TestClass]
-    public class UnitTest1
+    public class MainTesting
     {
         [TestMethod]
         public void CompilerCheck() {
