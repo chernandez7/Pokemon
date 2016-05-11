@@ -1,4 +1,6 @@
 language: csharp
 solution: Pokemon.sln
 mono:
-  - 4.5
+  - latest
+notifications:
+  email: false
