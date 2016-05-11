@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pokemon
 {
-    class Program
+    class Game
     {
-        static void Main(string[] args)
+        static int Main()
         {
+            Console.WriteLine("Hello World!");
+            return 0;
         }
     }
 }
