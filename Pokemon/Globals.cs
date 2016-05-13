@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pokemon
 {
@@ -10,10 +7,9 @@ namespace Pokemon
     {
         public static Dictionary<PokemonType, float[]> TypeDictionary;
 
-        public static int GetTypeIndexByName(string name)
-        {
-            switch (name)
-            {
+        // Get index from Dictionary Keys using plain string
+        public static int GetTypeIndexByName(string name) {
+            switch (name) {
                 case "Normal":
                     return 0;
                 case "Fight":

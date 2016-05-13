@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PokemonTests
 {
@@ -8,6 +7,7 @@ namespace PokemonTests
     {
         [TestMethod]
         public void CompilerCheck() {
+            // Checking that testing framework works
             Assert.IsTrue("Hello World!".Equals("Hello World!"));
         }
     }
