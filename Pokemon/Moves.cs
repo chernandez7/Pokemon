@@ -1,7 +1,8 @@
 ﻿namespace Pokemon
 {
-    internal class Move
+    public class Move
     {
+        public string Name { get; set; }
         public string Type { get; set; }
         public string Category { get; set; }
         public int CurrentPp { get; set; }
@@ -10,8 +11,9 @@
         public float Accuracy { get; set; }
         public bool IsSpecial { get; set; }
 
-        public Move(string type, string category, int maxPp, int power, float accuracy, bool isSpecial)
+        public Move(string name, string type, string category, int maxPp, int power, float accuracy, bool isSpecial)
         {
+            Name = name;
             Type = type;
             Category = category;
             MaxPp = maxPp;

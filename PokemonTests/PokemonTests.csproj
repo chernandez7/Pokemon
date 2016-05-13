@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="GlobalsTests.cs" />
     <Compile Include="MainTesting.cs" />
+    <Compile Include="MoveTests.cs" />
     <Compile Include="PokemonTypeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
