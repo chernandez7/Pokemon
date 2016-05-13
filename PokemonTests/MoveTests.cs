@@ -26,5 +26,16 @@ namespace PokemonTests
             Assert.IsTrue(Math.Abs(_tackle.Accuracy - 100) < .1);
             Assert.IsTrue(_tackle.IsSpecial == false);
         }
+
+        [TestMethod()]
+        public void PpDeduction()
+        {
+            // Initial Pp Count
+            Assert.IsTrue(_tackle.CurrentPp == 35);
+
+            // Move used
+            _tackle.CurrentPp--;
+            Assert.IsTrue(_tackle.CurrentPp == 34);
+        }
     }
 }

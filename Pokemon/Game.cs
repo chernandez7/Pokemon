@@ -11,7 +11,7 @@ namespace Pokemon
             Console.WriteLine("Hello World!");
 
             var game = new Game();
-            game.Play();
+            Play();
 
             return 0;
         }
@@ -22,7 +22,7 @@ namespace Pokemon
         }
 
         // Loads in Types from "Types.txt" into Dictionary<name, multipliers>
-        public Dictionary<PokemonType, float[]> LoadTypeDictionary() {
+        public static Dictionary<PokemonType, float[]> LoadTypeDictionary() {
             var typesDictionary = new Dictionary<PokemonType, float[]>();
             const string filePath = "../../../Documents/Types.txt";
 
@@ -36,16 +36,17 @@ namespace Pokemon
                 for (var i = 1; i < list.Count; i++)
                     multiplierList[i - 1] = float.Parse(list[i]);
                 
-                var type = new PokemonType(list[0], multiplierList); // Creates type
+                var type = new PokemonType(list[0]); // Creates type
 
                 typesDictionary.Add(type, multiplierList);
             }
-            Console.WriteLine("Types Loaded...");
+            reader.Close();
+
             return typesDictionary;
         }
 
         ///  Main play routine.  Loops until end of play.
-        public void Play()  {
+        private static void Play()  {
             //printWelcome();
             // Enter the main command loop.  Here we repeatedly read commands and
             // Execute them until the game is over.

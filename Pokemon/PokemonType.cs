@@ -1,4 +1,6 @@
-﻿namespace Pokemon
+﻿using System;
+
+namespace Pokemon
 {
     public class PokemonType {
     /* Pokemon Types
@@ -21,17 +23,12 @@
      * 17   Dark
      * 18   Fairy
      */
-        private readonly string _name;
-        private readonly float[] _multiplierArray; // Holds weakness/strength toward another type
+        public string Name { get; set; }
+        public float[] MultiplierArray { get; set; } // Holds weakness/strength toward another type
 
-        public PokemonType(string name, float[] multipliers) {
-            _name = name;
-            _multiplierArray = multipliers;
-        }
-
-        // Returns name of type
-        public string GetName() {
-            return _name;
+        public PokemonType(string name) {
+            Name = name;
+            MultiplierArray = Globals.TypeDictionary[this];
         }
 
         // Gets multiplier value from attacking type -> opponent type

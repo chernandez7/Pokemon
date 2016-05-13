@@ -8,21 +8,28 @@ namespace PokemonTests
     [TestClass()]
     public class PokemonTypeTests
     {
+        private PokemonType _normal;
+
         [TestInitialize]
         public void Initialize()
         {
             var game = new Game();
-            Globals.TypeDictionary = game.LoadTypeDictionary();
+            Globals.TypeDictionary = Game.LoadTypeDictionary();
+
+            _normal = new PokemonType("Normal");
         }
 
         [TestMethod()]
         public void GetNameTest()
         {
             // Checking if Getting Type name works
-            Assert.IsTrue(Globals.TypeDictionary.Keys.ToArray()[0].GetName() == "Normal");
+            Assert.IsTrue(_normal.Name == "Normal");
 
             // Should be "Bug"
-            Assert.IsFalse(Globals.TypeDictionary.Keys.ToArray()[6].GetName() == "jriofjifr");
+            Assert.IsFalse(_normal.Name == "jriofjifr");
+
+            // Check number of elements
+            Assert.IsTrue(Globals.TypeDictionary.Keys.Count == 18);
         }
 
         [TestMethod()]

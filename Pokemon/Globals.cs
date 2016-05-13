@@ -47,7 +47,7 @@ namespace Pokemon
                 case "Fairy":
                     return 17;
                 default:
-                    throw new Exception("Not a valid Type");
+                    throw new ArgumentException("Not a valid Type");
             }
         }
     }

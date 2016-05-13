@@ -9,13 +9,21 @@ namespace Pokemon
 {
     public class Pokemon
     {
-        private string _name;
-        private List<string> _typesList;
-        private List<Move> _movesList;
-        private int _MaxHp;
-        private Stats _stats;
+        public string Name { get; set; }
+        public List<PokemonType> TypesList { get; set; }
+        public List<Move> MovesList { get; set; }
+        public int MaxHp { get; set; }
+        public int CurrentHp { get; set; }
+        public PokemonStats PokemonStats { get; set; }
 
-        public Pokemon()
-        { }
+        public Pokemon(string name, List<PokemonType> typesList, List<Move> movesList, PokemonStats pokemonStats)
+        {
+            Name = name;
+            TypesList = typesList;
+            MovesList = movesList;
+            MaxHp = maxHp;
+            CurrentHp = maxHp;
+            PokemonStats = pokemonStats;
+        }
     }
 }

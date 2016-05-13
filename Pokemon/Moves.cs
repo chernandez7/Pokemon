@@ -2,14 +2,14 @@
 {
     public class Move
     {
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string Category { get; set; }
+        public string Name { get; }
+        public string Type { get; }
+        public string Category { get; }
         public int CurrentPp { get; set; }
-        public int MaxPp { get; set; }
-        public int Power { get; set; }
-        public float Accuracy { get; set; }
-        public bool IsSpecial { get; set; }
+        public int MaxPp { get; }
+        public int Power { get; }
+        public float Accuracy { get; }
+        public bool IsSpecial { get; }
 
         public Move(string name, string type, string category, int maxPp, int power, float accuracy, bool isSpecial)
         {
